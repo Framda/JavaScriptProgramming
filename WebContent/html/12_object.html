@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script>
+    var car = null;
+    
+    function fun1() {
+        car = {
+            model: "그랜져",
+            company: "현대 자동차",
+            color: "white",
+            speed: 0,
+            start: function() {
+                console.log("시동을 겁니다.");
+            },
+            setSpeed: function(speed) {
+                this.speed = speed;
+            },
+            info: function() {
+                console.log(this.model + ":" + this.color);
+            },
+            stop: function() {
+              this.setSpeed(0);
+                console.log("멈춥니다.");
+            }
+        };
+        console.log(car.model);
+        car.speed = 60;
+        console.log(car.speed);
+        car.info();
+        car.start();
+        car.setSpeed();
+        car.stop();
+    }
+    function fun2() {
+        if(car == null) return;
+        var json = JSON.stringify(car);
+        console.log(json)
+    }
+    function fun3() {
+        var json = '{"model":"그랜져","company":"현대 자동차","color":"white","speed":0}';
+        var car = JSON.parse(json);
+        console.log(car);
+        console.log(car.model);
+        console.log(car.company);
+    }
+    function fun4() {
+        var member = {
+            name: "홍길동",
+            age: 20,
+            car: {model: "포르쉐", color: "흰색"},
+            hobby: ["영화감상", "코딩", "여행", ]
+        };
+        var json = JSON.stringify(member);
+        console.log(json);
+        
+        var member2 = JSON.parse(json);
+        console.log(member2.name);
+        console.log(member2.car.model);
+        console.log(member2.hobby[1]);
+    }
+</script>
+
+</head>
+<body>
+    <button onclick="fun1()">객체 생성 및 사용</button><br><br>
+    <button onclick="fun2()">객체를 문자열로 변환</button><br><br>
+    <button onclick="fun3()">문자열을 객체로 변환</button><br><br>
+    <button onclick="fun4()">여러 타입을 속성으로 가지는 객체</button><br><br>
+</body>
+</html>

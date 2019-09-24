@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+    //함수선언
+	function fun1() {
+		console.log("fun1() 호출");
+	}
+	
+	var fun2 = function() {
+		console.log("fun2() 호출");
+	};
+	//함수호출
+	fun1();
+	fun2();
+    
+    var fun3 = fun1;
+    fun3();
+    
+    //함수선언
+    //매개변수선언시에 var도 붙이지않는다
+    function fun4(x, y) {
+        var result = x + y;
+        console.log(result);
+    }
+    //함수 호출
+    fun4(3, 5); 
+    
+    //함수선언
+    function fun5(x, y) {
+        var result = x + y;
+        return result;
+    }
+    //함수 호출
+    var rst = fun5(3, 5);
+    console.log(rst);
+</script>
+
+</head>
+<body>
+    
+</body>
+</html>

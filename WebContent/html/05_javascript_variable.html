@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+	//전역변수
+	var var1 = 10;
+	var2 = 20;
+	
+	//함수선언
+	function fun1() {
+		//로컬변수
+		var var3 = 30;
+		//전역변수
+		var4 = 40;
+		
+		console.log("var1: " + var1);
+		console.log("var2: " + var2);
+		console.log("var3: " + var3);
+		console.log("var4: " + var4);
+	}
+	
+	function fun2() {
+		console.log("var1: " + var1);
+		console.log("var2: " + var2);
+		console.log("var3: " + var3);
+		console.log("var4: " + var4);
+	}
+	//함수호출
+	fun1();
+	fun2();
+</script>
+
+</head>
+<body>
+	
+</body>
+</html>	

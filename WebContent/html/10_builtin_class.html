@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script>
+     function fun1() {
+         var password = "12345678";
+         console.log(password.length);
+     }
+    function fun2() {
+        var ssn = "123456-1234567"
+        var sex = console.log(ssn.charAt(7));
+        if(sex == "1" || sex =="3") {
+            console.log("남자");
+        } else {
+            console.log("여자");
+        }
+    }
+    function fun3() {
+        var ssn = "123456-1234567"
+        var year = ssn.substr(0, 2);
+        var month = ssn.substring(2, 4);
+        var date = ssn.substr(4, 2);
+        
+        console.log(year + "." + month + "." + date);
+    }
+    function fun4() {
+        var now = new Date();
+        var year = now.getFullYear();
+        var month = now.getMonth() + 1;
+        var date = now.getDate();
+        console.log(year + "." + month + "." + date + "\n" + now);
+    }
+    function fun5(radius) {
+        var result = radius * radius * Math.PI;
+        console.log(result);
+    }
+</script>
+
+</head>
+<body>
+    <button onclick="fun1()">String length</button>
+    <button onclick="fun2()">String charAt</button>
+    <button onclick="fun3()">String substr, substring</button>
+    <button onclick="fun4()">String Date</button>
+    <button onclick="fun5(5)">String Math</button>
+</body>
+</html>

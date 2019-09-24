@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<script type="text/javascript">
+		function fun1() {
+			console.log("Hello JavaScript");
+		}
+        function fun2() {
+            var x = 10;
+            var y = 20;
+            var result = x + y;
+            console.log("result: " + result);
+        }
+        function fun3() {
+            //~~ 뭔가 내용이있음 그리고아무튼 리턴 팔쓰
+            return false;
+        }
+        function fun4() {
+        	console.log("마우스가 그림 안에 있습니다.");
+        	
+        }
+        function fun5() {
+        	console.log("마우스가 그림 밖에 있습니다.");
+        }
+	</script>
+	<style>
+	</style>
+</head>
+<body>
+    <input type="button" value="Hello JavaScript" onclick="fun1()"><br>
+	<input type="button" value="10 + 20 = " onclick="fun2()"/><br>
+	
+	<a href="javascript: fun1()"><img src="../common/images/icon01.jpg" width="200"></a><br>
+	<a href="https://www.apache.org" onclick="return fun3()">Naver</a>
+	
+    <form action="https://www.apache.org" onsubmit="return fun3()">
+	    <input type="submit" value="이동"/>
+	</form><br>
+	
+	<img src="../common/images/Desert.jpg" width="300" onmouseenter="fun4()" onmouseleave="fun5()" />
+	
+</body>
+</html>

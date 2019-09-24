@@ -3,9 +3,92 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+
+<style>
+	a {
+		color: blue;
+	}
+	* {
+		color: #000;
+		text-decoration: none;
+	}
+	body {
+		background-color: rgba(0, 0, 0, .03);
+		margin: 0;
+		height: 100vh;
+		width: 100%;
+	}
+	#wrap {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+	}
+	#header {
+		text-align: center;
+		border-bottom: 1px solid #000;
+		height: 70px;
+	}
+	#content {
+		display: flex;
+		flex-grow: 1;
+	}
+	#sideBar {
+		width: 20%;
+		border-right: 1px solid #000;
+		background-color: rgba(0, 0, 0, .1);
+	}
+	#center {
+		width: 80%;
+		background-color: rgba(0, 0, 0, .05);
+	}
+	#center iframe {
+		margin: 0;
+		width: 100%;
+		height: 100%;
+		padding: 0;
+		margin: 0;
+		border: none;
+	}
+	#footer {
+		border-top: 1px solid #000;
+		height: 50px;
+		line-height: 50px;
+		text-align: center;
+		font-size: 12px;
+		color: #999;
+	}
+	#footer a {
+		color: coral;
+	}
+</style>
+
 </head>
 <body>
-	<h4>index.html</h4>
-	<hr/>
+<div id="wrap">
+	<div id="header"><h3><a href="index.html">JavaScriptProgramming</a></h3></div>
+	<div id="content">
+		<div id="sideBar">
+			<ol>
+				<li><a href="html/01_javascript_tag.html" target="iframe">JavaScript Tag</a></li>
+				<li><a href="html/02_javascript_tag.html" target="iframe">JavaScript External</a></li>
+				<li><a href="html/03_javascript_tag.html" target="iframe">JavaScript Comment</a></li>
+				<li><a href="html/04_javascript_variable.html" target="iframe">JavaScript Variable</a></li>
+				<li><a href="html/05_javascript_variable.html" target="iframe">JavaScript Variable</a></li>
+				<li><a href="html/06_variable_scope.html" target="iframe">Variable Scope</a></li>
+				<li><a href="html/07_javascript_function.html" target="iframe">JavaScript Function</a></li>
+				<li><a href="html/08_event_handling.html" target="iframe">Event Handling</a></li>
+				<li><a href="html/09.global_function.html" target="iframe">Global Function</a></li>
+				<li><a href="html/10_builtin_class.html" target="iframe">BuiltIn class</a></li>
+				<li><a href="html/11_array.html" target="iframe">JavaScript Array</a></li>
+				<li><a href="html/12_object.html" target="iframe">JavaScript object</a></li>
+			</ol>
+		</div>
+		<div id="center">
+			<iframe name="iframe" src="http://tomcat.apache.org"></iframe>
+		</div>
+	</div>
+	<div id="footer">&copy;copyright 2019 . <a href="https://github.com/Framda" target="_blank">Framda</a> </div>
+</div>
 </body>
 </html>
