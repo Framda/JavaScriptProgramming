@@ -2,44 +2,34 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
-
+<title>Jquery</title>
+<script src="../common/js/jquery-3.4.1.min.js"></script>
 <script>
     function fun1() {
-        var img1 = document.querySelector("#img1");
-        img1.src = "../common/images/cat2.jpg";
+        var JqueryImg1 = $("#img1");
+        JqueryImg1.attr("src", "../common/images/cat2.jpg" );
     }
     function fun2() {
-        var imgList = document.querySelectorAll(".img2");
-        for(var i=0; i<imgList.length;i++) {
-            imgList[i].src = "../common/images/cat3.png";
-        }
+        var JqueryImg2 = $(".img2");
+        JqueryImg2.attr("src", "../common/images/cat3.png" );
     }
     function fun3() {
-        var imgList = document.querySelectorAll("img");
-        for(var i=0; i<imgList.length;i++) {
-            imgList[i].src = "../common/images/cat4.jpg";
-        }
+        var JqueryImg3 = $("img");
+        JqueryImg3.attr("src", "../common/images/cat4.jpg");
     }
     function fun4() {
-        var imgList = document.getElementsByTagName("img");
-        for(var i=0; i<imgList.length;i++) {
-            imgList[i].src = "../common/images/cat.jpg";
-        }
+        var JqueryImg4 = $("img");
+        JqueryImg4.attr("src", "../common/images/cat.jpg");
     }
     function fun5() {
-        var imgList = document.querySelectorAll("#div1 img");
-        for(var i=0; i<imgList.length;i++) {
-            imgList[i].src = "../common/images/cat5.jpg";
-        }
+        $("#div1 img").attr("src", "../common/images/cat5.jpg");
     }
     function fun6() {
-        var inputMid = document.querySelector("#joinForm input[name=mid]");
-        var hobby = document.querySelectorAll("#joinForm input[name=hobby]:checked");
-        console.log(inputMid.value);
+        var inputMid = $("#joinForm input[name=mid]");
+        console.log(inputMid.val());
         
-        var inputPass = document.querySelector("#joinForm input[name=mpassword]");
-        var password = inputPass.value;
+        var inputPass = $("#joinForm input[name=mpassword]");
+        var password = inputPass.val();
         if(password == "") {
             window.alert("패스워드 안 넣을래?");
         } else {
@@ -47,24 +37,15 @@
                 window.alert("패스워드 똑바로 안넣을래?");
             }
         }
+        var hobby = $("#joinForm input[name=hobby]:checked");
         for(var i=0; i<hobby.length; i++) {
             console.log(hobby[i].value);
         }
     }
-    function fun7() {
-        var form = document.joinForm;
-        
-        var mid = document.joinForm.mid.value;
-        console.log("mid: " + mid);
-        
-        var mpassword = document.joinForm.mpassword.value;
-        console.log("password: " + mpassword);
-    }
 </script>
-
 </head>
 <body>
-    <button onclick="fun1()">ID로 찾기</button><br><br>
+ 	<button onclick="fun1()">ID로 찾기</button><br><br>
     <button onclick="fun2()">Class로 찾기</button><br><br>
     <button onclick="fun3()">Tag로 찾기</button><button onclick="fun4()">Tag로 찾기</button><br><br>
     <button onclick="fun5()">CSS 선택자를 이용해찾기</button><br><br>
@@ -99,28 +80,5 @@
             여행<input name="hobby" type="checkbox" value="trip"><br>
             코딩<input name="hobby" type="checkbox" value="coding"><br>
     </form>
-    
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

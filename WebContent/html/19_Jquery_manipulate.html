@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+    function fun1() {
+//        $("#div1").html("<img src= '../common/images/cat5.jpg' height='100%'>");
+        $("#div1").append("<img src= '../common/images/cat5.jpg' height='100%'>");
+    }
+    function fun2() {
+        var div2 = $("#div2")
+        div2.css("width", "200px")
+        div2.css("height", "200px")
+        div2.css("backgroundColor", "#FF4040");
+    }
+</script>
+<script src="../common/js/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+    <button onclick="fun1()">내용채우기</button>
+    <button onclick="fun2()">CSS Exchange</button>
+    <hr>
+    <div id="div1"></div>
+    <div id="div2"></div>
+</body>
+</html>
