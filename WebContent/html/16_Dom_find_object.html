@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script>
+    function fun1() {
+        var img1 = document.querySelector("#img1");
+        img1.src = "../common/images/cat2.jpg";
+    }
+    function fun2() {
+        var imgList = document.querySelectorAll(".img2");
+        for(var i=0; i<imgList.length;i++) {
+            imgList[i].src = "../common/images/cat3.png";
+        }
+    }
+    function fun3() {
+        var imgList = document.querySelectorAll("img");
+        for(var i=0; i<imgList.length;i++) {
+            imgList[i].src = "../common/images/cat4.jpg";
+        }
+    }
+    function fun4() {
+        var imgList = document.getElementsByTagName("img");
+        for(var i=0; i<imgList.length;i++) {
+            imgList[i].src = "../common/images/cat.jpg";
+        }
+    }
+    function fun5() {
+        var imgList = document.querySelectorAll("#div1 img");
+        for(var i=0; i<imgList.length;i++) {
+            imgList[i].src = "../common/images/cat5.jpg";
+        }
+    }
+    function fun6() {
+        var inputMid = document.querySelector("#joinForm input[name=mid]");
+        var hobby = document.querySelectorAll("#joinForm input[name=hobby]:checked");
+        console.log(inputMid.value);
+        
+        var inputPass = document.querySelector("#joinForm input[name=mpassword]");
+        var password = inputPass.Value;
+        if(password == "") {
+            window.alert("패스워드 안 넣을래?");
+        } else {
+            if(password.length < 8){
+                window.alert("패스워드 똑바로 안넣을래?");
+            }
+        }
+        for(var i=0; i<hobby.length; i++) {
+            console.log( hobby[i].value);
+        }
+    }
+    function fun7() {
+        var form = document.joinForm;
+        
+        var mid = document.joinForm.mid.value;
+        console.log("mid: " + mid);
+        
+        var mpassword = document.joinForm.mpassword.value;
+        console.log("password: " + mpassword);
+    }
+</script>
+
+</head>
+<body>
+    <button onclick="fun1()">ID로 찾기</button><br><br>
+    <button onclick="fun2()">Class로 찾기</button><br><br>
+    <button onclick="fun3()">Tag로 찾기</button><button onclick="fun4()">Tag로 찾기</button><br><br>
+    <button onclick="fun5()">CSS 선택자를 이용해찾기</button><br><br>
+    <button onclick="fun6()">form 양식 찾기</button><br><br>
+    <button onclick="fun7()">form 양식 찾기</button><br><br>
+    
+    <hr>
+    <img id="img1" src="../common/images/cat.jpg" width="200" />
+    <hr>
+    
+    <img class="img2" src="../common/images/cat.jpg" width="200" />
+    <img class="img2" src="../common/images/cat.jpg" width="200" />
+    <hr>
+    
+    <img src="../common/images/cat.jpg" width="200" />
+    <img src="../common/images/cat.jpg" width="200" />
+    
+    <br>
+    
+    <div id="div1">
+        <img src="../common/images/cat.jpg" width="200" />
+        <img src="../common/images/cat.jpg" width="200" />
+    </div>
+    
+    <br>
+    
+    <form id="joinForm" name="joinForm">
+        ID: <input name="mid" type="text"> <br>
+        password: <input name="mpassword" type="password"> <br>
+        hobby: <br>
+            영화<input name="hobby" type="checkbox" value="movie"><br>
+            여행<input name="hobby" type="checkbox" value="trip"><br>
+            코딩<input name="hobby" type="checkbox" value="coding"><br>
+    </form>
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script>
+    function fun1() {
+        var img1 = document.getElementById("img1");
+        img1.src = "../common/images/cat2.jpg";
+    }
+    function fun2() {
+        var imgList = document.getElementsByClassName("img2");
+        for(var i=0; i<imgList.length;i++) {
+            imgList[i].src = "../common/images/cat3.png";
+        }
+    }
+    function fun3() {
+        var imgList = document.getElementsByTagName("img");
+        for(var i=0; i<imgList.length;i++) {
+            imgList[i].src = "../common/images/cat4.jpg";
+        }
+    }
+    function fun4() {
+        var imgList = document.getElementsByTagName("img");
+        for(var i=0; i<imgList.length;i++) {
+            imgList[i].src = "../common/images/cat.jpg";
+        }
+    }
+    
+</script>
+
+</head>
+<body>
+    <button onclick="fun1()">ID로 찾기</button><br><br>
+    <button onclick="fun2()">Class로 찾기</button><br><br>
+    <button onclick="fun3()">Tag로 찾기</button><button onclick="fun4()">Tag로 찾기</button><br><br>
+    
+    <hr/>
+    <img id="img1" src="../common/images/cat.jpg" width="200" />
+    <hr>
+    
+    <img class="img2" src="../common/images/cat.jpg" width="200" />
+    <img class="img2" src="../common/images/cat.jpg" width="200" />
+    <hr>
+    
+    <img src="../common/images/cat.jpg" width="200" />
+    <img src="../common/images/cat.jpg" width="200" />
+</body>
+</html>

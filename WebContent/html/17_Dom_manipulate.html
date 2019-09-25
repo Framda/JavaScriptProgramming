@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+    <script>
+        function fun1() {
+            var div1 = document.querySelector("#div1");
+            div1.innerHTML = "<img src= '../common/images/cat5.jpg' height='100%'>";
+        }
+        function fun2() {
+            var div2 = document.querySelector("#div2");
+            div2.style.width = "200px";
+            div2.style.height = "200px";
+            div2.style.backgroundColor = "#FF4040";
+        }
+    </script>
+</head>
+<body>
+    <button onclick="fun1()">내용채우기</button>
+    <button onclick="fun2()">CSS Exchange</button>
+    <hr>
+    <div id="div1"></div>
+    <div id="div2"></div>
+</body>
+</html>

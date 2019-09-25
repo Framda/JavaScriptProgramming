@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script>
+    function fun1() {
+		var w = window.innerWidth;
+		var h = window.innerHeight;
+        console.log("width: " + w);
+        console.log("height: " + h);
+    }
+    function fun2() {
+        window.alert("is a message");
+    }
+    function fun3() {
+        var result = window.confirm("is a message");
+        if(result == true) {
+            window.alert("true");
+        } else {
+            window.alert("false");
+        }
+    }
+    function fun4() {
+        var input = window.prompt("Enter count");
+        if(input != null) {
+            var amount = parseInt(input);
+            console.log("입력된 수량: " + amount);
+        } else {
+            console.log("취소하였습니다");
+        }
+    }
+    function fun5() {
+        window.open("08_event_handling.html", "", "width=1280, height=720");
+    }
+     function fun6() {
+         timerId = setInterval(function (){
+            window.console.log("딱 걸렸쓰!");
+         },1000);
+     }
+    function fun7() {
+        clearInterval(timerId);
+     }
+    function fun8() {
+        timerId2 = setTimeout(function() {
+            window.console.log("wake up");
+        },5000)
+    }
+    function fun9() {
+        window.clearTimeout(timerId2);
+    }
+</script>
+
+</head>
+<body>
+    <button onclick="fun1()">ViewPort Size</button><br><br>
+    <button onclick="fun2()">Alert message</button><br><br>
+    <button onclick="fun3()">Confirm massage</button><br><br>
+    <button onclick="fun4()">Import massage</button><br><br>
+    <button onclick="fun5()">Dialogue window Open</button><br><br>
+    <button onclick="fun6()">주기적 실행 시작</button> <button onclick="fun7()">주기적 실행 취소</button><br><br>
+    <button onclick="fun8()">미래 실행시간 설정</button> <button onclick="fun9()">미래 실행시간 취소</button><br><br>
+</body>
+</html>
